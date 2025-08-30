@@ -1,0 +1,43 @@
+[
+  {
+    "id": 123878,
+    "cliente": "Elisa Lanicia",
+    "dataEnvio": "2025-08-10",
+    "status": "Pendente",
+    "endereco": "Rua das Acácias, 1200 - São Paulo/SP",
+    "produto": "Notebook Dell XPS",
+    "dataEstimadaEntrega": "2025-08-14",
+    "observacoes": "Entregar somente no período da tarde",
+    "historico": [{ "data": "2025-08-10", "status": "Pedido Criado" }]
+  },
+  {
+    "id": 123902,
+    "cliente": "Sandra Santos",
+    "dataEnvio": "2025-08-08",
+    "status": "Em Rota",
+    "endereco": "Av. Paulista, 400 - São Paulo/SP",
+    "produto": "Smartphone Samsung S23",
+    "dataEstimadaEntrega": "2025-08-13",
+    "observacoes": "",
+    "historico": [
+      { "data": "2025-08-08", "status": "Pedido Criado" },
+      { "data": "2025-08-09", "status": "Coletado" },
+      { "data": "2025-08-13", "status": "Saiu para entrega" }
+    ]
+  },
+  {
+    "id": 123938,
+    "cliente": "Beta Conciira",
+    "dataEnvio": "2025-08-09",
+    "status": "Entregue",
+    "endereco": "Rua Flores Belas, 777 - Curitiba/PR",
+    "produto": "Monitor LG UltraWide",
+    "dataEstimadaEntrega": "2025-08-12",
+    "observacoes": "Cliente solicitou instalação",
+    "historico": [
+      { "data": "2025-08-09", "status": "Pedido Criado" },
+      { "data": "2025-08-10", "status": "Coletado" },
+      { "data": "2025-08-12", "status": "Entregue" }
+    ]
+  }
+]
