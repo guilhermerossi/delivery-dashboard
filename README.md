@@ -1,27 +1,40 @@
-# DeliveryDashboard
+# 🚚 Delivery Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+Projeto Angular para gerenciamento de entregas de uma transportadora, com integração a **JSON Server** para simulação de API REST.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠️ Pré-requisitos
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/) (versão LTS recomendada)
+- [Angular CLI](https://angular.io/cli)
+  ```bash
+  npm install -g @angular/cli
+  ```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## JSON Server
+npm install -g json-server
 
-## Build
+⚙️ Instalação
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Clone o repositório:
 
-## Running unit tests
+git clone https://github.com/seu-usuario/delivery-dashboard.git
+cd delivery-dashboard
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Instale as dependências:
 
-## Running end-to-end tests
+npm install
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Rodando o projeto
+1. Rodar a API fake (JSON Server)
+json-server --watch db.json --port 3000
 
-## Further help
+API disponível em: http://localhost:3000
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Exemplo de endpoint: http://localhost:3000/entregas
+
+2. Rodar o frontend Angular
+ng serve
+
+Frontend disponível em: http://localhost:4200
