@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+/* Reset e fonte */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
+/* Container responsivo */
+.container {
+  width: min(1100px, 92vw);
+  margin: 24px auto;
+  display: grid;
+  gap: 16px;
+}
+
+/* Cards simples */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+/* Grid utilitário */
+.grid {
+  display: grid;
+  gap: 12px;
+}
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Status chips (cores) */
+.status-pendente {
+  background: #fff3cd;
+}
+.status-emrota {
+  background: #cfe2ff;
+}
+.status-entregue {
+  background: #d1e7dd;
+}
+.status-cancelada {
+  background: #f8d7da;
+}

@@ -1,1 +1,68 @@
-<p>detalhe-entrega works!</p>
+<div class="detalhe-container mat-elevation-z2">
+  <!-- Cabeçalho -->
+  <div class="header">
+    <h2>📋 Detalhes da Entrega</h2>
+    <button mat-stroked-button color="primary" routerLink="/entregas">
+      <mat-icon>arrow_back</mat-icon>
+      Voltar
+    </button>
+  </div>
+
+  <!-- Informações principais -->
+  <mat-card class="info-card">
+    <mat-card-title>Informações da Entrega</mat-card-title>
+    <mat-card-content>
+      <div class="info-grid">
+        <div>
+          <strong>Código:</strong> {{ entrega?.codigo }}
+        </div>
+        <div>
+          <strong>Cliente:</strong> {{ entrega?.cliente }}
+        </div>
+        <div>
+          <strong>Endereço:</strong> {{ entrega?.endereco }}
+        </div>
+        <div>
+          <strong>Produto:</strong> {{ entrega?.produto }}
+        </div>
+        <div>
+          <strong>Data de Envio:</strong>
+          {{ entrega?.dataEnvio | date: "dd/MM/yyyy" }}
+        </div>
+        <div>
+          <strong>Status:</strong>
+          <span [ngClass]="'status ' + entrega?.status?.toLowerCase()">
+            {{ entrega?.status }}
+          </span>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Observações -->
+  <mat-card class="info-card">
+    <mat-card-title>Observações</mat-card-title>
+    <mat-card-content>
+      <p *ngIf="entrega?.observacoes; else semObs">
+        {{ entrega?.observacoes }}
+      </p>
+      <ng-template #semObs>
+        <em>Nenhuma observação registrada.</em>
+      </ng-template>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Histórico -->
+  <mat-card class="info-card">
+    <mat-card-title>Histórico de Movimentações</mat-card-title>
+    <mat-card-content>
+      <mat-list>
+        <mat-list-item *ngFor="let mov of historico">
+          <mat-icon matListIcon>history</mat-icon>
+          <div matLine>{{ mov.descricao }}</div>
+          <div matLine class="data">{{ mov.data | date: "dd/MM/yyyy HH:mm" }}</div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>
